@@ -1,28 +1,29 @@
-# Thesis Q&A Chatbot 🤖📘
+# Robotics QA Bot
 
-A lightweight Streamlit app that lets users ask questions about Darshan's master's thesis using a free local LLM.
+domain-specific LLM-powered question-answering assistant designed to answer technical queries about robotics systems, including:
+- Robot Operating System (ROS)
+- Sensors (LiDAR, IMU, etc.)
+- SLAM (Simultaneous Localization and Mapping)
+- Navigation and Perception
+The assistant uses a collection of robotics-related PDFs for context and retrieves relevant answers using semantic search and language models.
 
-## Features
-- Ask about abstract, conclusion, methodology, etc.
-- Uses Mistral-7B or any HuggingFace LLM (no API key needed)
-- Uses FAISS vector search for fast retrieval
-- Clean UI with Streamlit
+# Documents
+All robotics reference PDFs are stored in the docs/ folder. These are indexed and queried by the QA engine for context-aware answers.
 
-## Setup Instructions
+# Technologies Used
+- Python
+- LangChain / Transformers
+- FAISS or ChromaDB for vector search
+- Streamlit / Flask (depending on app interface)
+- PDF document loaders and embedders
 
-1. Clone the project or download files
-2. Install dependencies:
-```
-pip install -r requirements.txt
-```
+# To Do
+- Add support for multilingual queries.
+- Dockerize for easy deployment.
+- Add unit tests.
+- Fine-tune the language model
 
-3. Run the app:
-```
-streamlit run app.py
-```
-
-4. Ask your questions!
-
-## Notes
-- Ensure your system can run HuggingFace models (better with GPU)
-- Place your thesis file in the same folder named exactly as: `Thesis_finalreport_DarshanBR.pdf`
+# Author
+Darshan Bakilana Ramesh
+https://www.linkedin.com/in/darshanbakilanaramesh/
+https://portfolio-darshan-bakilana-rameshs-projects.vercel.app/
